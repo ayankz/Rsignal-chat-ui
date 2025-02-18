@@ -1,0 +1,112 @@
+//:root {
+//  --vt-c-white: #ffffff;
+//  --vt-c-white-soft: #f8f8f8;
+//  --vt-c-white-mute: #f2f2f2;
+//
+//  --vt-c-black: #f8f6f6;
+//  --vt-c-black-soft: #222222;
+//  --vt-c-black-mute: #282828;
+//
+//  --vt-c-indigo: #2c3e50;
+//
+//  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+//  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+//  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+//  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+//
+//  --vt-c-text-light-1: var(--vt-c-indigo);
+//  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+//  --vt-c-text-dark-1: var(--vt-c-white);
+//  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+//}
+//
+///* semantic color variables for this project */
+//:root {
+//  --color-background: var(--vt-c-white);
+//  --color-background-soft: var(--vt-c-white-soft);
+//  --color-background-mute: var(--vt-c-white-mute);
+//
+//  --color-border: var(--vt-c-divider-light-2);
+//  --color-border-hover: var(--vt-c-divider-light-1);
+//
+//  --color-heading: var(--vt-c-text-light-1);
+//  --color-text: var(--vt-c-text-light-1);
+//
+//  --section-gap: 160px;
+//}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+:root{
+  --color-text: #000000;
+  --color-btn:#ffffff;
+  --color-background:#FFFFFF;
+  --color-text-grey:#979797;
+  --border-input:#BFBFBF;
+  --bg-black: #2C2C2C;
+  --border-header: #B5B5B5;
+  --avatar-bg: #E9E9E9;
+  --status-text-green:#47AA37;
+  --msg-bg: #EBEBEB;
+  --time-color:#979393;
+
+}
+body {
+  min-height: 100vh;
+  background: var(--color-background);
+  font-family:
+    'SF Pro Display',
+    sans-serif;
+  font-size: 16px;
+  h2{
+    font-weight: bold;
+    font-size: 24px;
+  }
+  h3{
+    font-size: 18px;
+    color: var(--color-text-grey);
+  }
+  svg{
+    cursor: pointer;
+  }
+}
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.center{
+  justify-content: center;
+  align-items: center;
+}
+.control{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &  input{
+    padding: 10px 40px;
+    border:1px solid var(--border-input);
+    border-radius: 30px;
+    font-size: 18px;
+    max-width: 340px;
+    width: 100%;
+  }
+}
+.btn{
+  position: fixed;
+  bottom: 200px;
+  border-radius: 30px;
+  background: var(--bg-black);
+  color:var(--color-btn);
+  font-size: 18px;
+  padding: 20px;
+  text-align: center;
+  border: none;
+  max-width: 340px;
+  width: 100%;
+  cursor: pointer;
+}
