@@ -7,7 +7,11 @@ import { useRouter } from 'vue-router';
 const userStore = useUserStore();
 const username = ref('');
 const router = useRouter();
-
+/**
+ * Logs in the user by storing their username in the user store
+ * and navigating to the chat page.
+ * @function
+ */
 const loginUser = () => {
   if (username.value.trim()) {
     userStore.login(username.value.trim());

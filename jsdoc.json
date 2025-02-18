@@ -1,0 +1,16 @@
+{
+  "source": {
+    "include": ["src"],
+    "includePattern": "\\.(ts|vue)$",
+    "excludePattern": "(node_modules|dist)"
+  },
+  "plugins": ["node_modules/jsdoc-vuejs"],
+  "opts": {
+    "destination": "./docs",
+    "recurse": true
+  },
+  "typescript": {
+    "moduleRoot": "src",
+    "enabled": false
+  }
+}

@@ -36,6 +36,7 @@ import {useMessageStore} from "@/store/messages.ts";
 import { v4 as uuidv4 } from 'uuid';
 
 const apiUrl = '/api/Messenger/send';
+
 const userStore = useUserStore();
 const { name, isAuthenticated } = storeToRefs(userStore);
 const signalR = inject("signalR");
@@ -67,6 +68,11 @@ onMounted(() => {
     });
   }
 });
+/**
+ * Sends a message to the server and updates the store.
+ * @async
+ * @function
+ */
 const onSendMessage = async () => {
   try {
     if(addedMessage.value){
@@ -84,11 +90,20 @@ const onSendMessage = async () => {
     console.error('Request error:', error);
   }
 }
+/**
+ * Extracts the initials from the user's name.
+ * @param {string} name - The user's full name.
+ * @returns {string} - The user's initials.
+ */
 const getInitials = (name) =>{
   if (name){
     return name.split('')[0].toUpperCase();
   }
 }
+/**
+ * Handles user logout and redirects to the home page.
+ * @function
+ */
 const handleLogout = () => {
   userStore.logout();
   router.push("/home");
